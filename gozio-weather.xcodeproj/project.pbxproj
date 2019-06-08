@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3786068D22AC556500C9F0BA /* OpenWeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3786068C22AC556500C9F0BA /* OpenWeatherApi.swift */; };
+		3786069122AC596E00C9F0BA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3786069022AC596E00C9F0BA /* Logger.swift */; };
 		37F3F97522AC0A64007886D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3F97422AC0A64007886D5 /* AppDelegate.swift */; };
-		37F3F97722AC0A64007886D5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3F97622AC0A64007886D5 /* FirstViewController.swift */; };
-		37F3F97922AC0A64007886D5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3F97822AC0A64007886D5 /* SecondViewController.swift */; };
+		37F3F97722AC0A64007886D5 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3F97622AC0A64007886D5 /* WeatherViewController.swift */; };
+		37F3F97922AC0A64007886D5 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3F97822AC0A64007886D5 /* LocationsViewController.swift */; };
 		37F3F97C22AC0A64007886D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F3F97A22AC0A64007886D5 /* Main.storyboard */; };
 		37F3F97E22AC0A65007886D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37F3F97D22AC0A65007886D5 /* Assets.xcassets */; };
 		37F3F98122AC0A65007886D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F3F97F22AC0A65007886D5 /* LaunchScreen.storyboard */; };
 		37F3F98C22AC0A65007886D5 /* gozio_weatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3F98B22AC0A65007886D5 /* gozio_weatherTests.swift */; };
 		37F3F99722AC0A65007886D5 /* gozio_weatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3F99622AC0A65007886D5 /* gozio_weatherUITests.swift */; };
+		A701D07885074D15C71B00A4 /* Pods_gozio_weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAFBFA2B6AD05B182DFCC9 /* Pods_gozio_weather.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3786068C22AC556500C9F0BA /* OpenWeatherApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherApi.swift; sourceTree = "<group>"; };
+		3786069022AC596E00C9F0BA /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		37F3F97122AC0A64007886D5 /* gozio-weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gozio-weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F3F97422AC0A64007886D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		37F3F97622AC0A64007886D5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		37F3F97822AC0A64007886D5 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		37F3F97622AC0A64007886D5 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		37F3F97822AC0A64007886D5 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		37F3F97B22AC0A64007886D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37F3F97D22AC0A65007886D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37F3F98022AC0A65007886D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,9 @@
 		37F3F99222AC0A65007886D5 /* gozio-weatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gozio-weatherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F3F99622AC0A65007886D5 /* gozio_weatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gozio_weatherUITests.swift; sourceTree = "<group>"; };
 		37F3F99822AC0A65007886D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8603A389CA8148E73B8FA945 /* Pods-gozio-weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gozio-weather.release.xcconfig"; path = "Target Support Files/Pods-gozio-weather/Pods-gozio-weather.release.xcconfig"; sourceTree = "<group>"; };
+		C9CAFBFA2B6AD05B182DFCC9 /* Pods_gozio_weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gozio_weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0FD8312D30C1D80A39A478D /* Pods-gozio-weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gozio-weather.debug.xcconfig"; path = "Target Support Files/Pods-gozio-weather/Pods-gozio-weather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A701D07885074D15C71B00A4 /* Pods_gozio_weather.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +85,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B630C813547DF32C8584DD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9CAFBFA2B6AD05B182DFCC9 /* Pods_gozio_weather.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3786068E22AC58EF00C9F0BA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3786068F22AC58F800C9F0BA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3786069022AC596E00C9F0BA /* Logger.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		37F3F96822AC0A64007886D5 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +115,8 @@
 				37F3F98A22AC0A65007886D5 /* gozio-weatherTests */,
 				37F3F99522AC0A65007886D5 /* gozio-weatherUITests */,
 				37F3F97222AC0A64007886D5 /* Products */,
+				BE3161160A1138EABA2A5708 /* Pods */,
+				2B630C813547DF32C8584DD1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +133,10 @@
 		37F3F97322AC0A64007886D5 /* gozio-weather */ = {
 			isa = PBXGroup;
 			children = (
+				3786068F22AC58F800C9F0BA /* Helpers */,
+				3786068E22AC58EF00C9F0BA /* Models */,
+				37F3F9A422AC0A7D007886D5 /* Controllers */,
 				37F3F97422AC0A64007886D5 /* AppDelegate.swift */,
-				37F3F97622AC0A64007886D5 /* FirstViewController.swift */,
-				37F3F97822AC0A64007886D5 /* SecondViewController.swift */,
 				37F3F97A22AC0A64007886D5 /* Main.storyboard */,
 				37F3F97D22AC0A65007886D5 /* Assets.xcassets */,
 				37F3F97F22AC0A65007886D5 /* LaunchScreen.storyboard */,
@@ -128,6 +163,25 @@
 			path = "gozio-weatherUITests";
 			sourceTree = "<group>";
 		};
+		37F3F9A422AC0A7D007886D5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				37F3F97622AC0A64007886D5 /* WeatherViewController.swift */,
+				37F3F97822AC0A64007886D5 /* LocationsViewController.swift */,
+				3786068C22AC556500C9F0BA /* OpenWeatherApi.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BE3161160A1138EABA2A5708 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0FD8312D30C1D80A39A478D /* Pods-gozio-weather.debug.xcconfig */,
+				8603A389CA8148E73B8FA945 /* Pods-gozio-weather.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37F3F99B22AC0A65007886D5 /* Build configuration list for PBXNativeTarget "gozio-weather" */;
 			buildPhases = (
+				D557997DBA79EDFD37BD1BD4 /* [CP] Check Pods Manifest.lock */,
 				37F3F96D22AC0A64007886D5 /* Sources */,
 				37F3F96E22AC0A64007886D5 /* Frameworks */,
 				37F3F96F22AC0A64007886D5 /* Resources */,
+				E3AF5C9EFD7C23B5044B9D31 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,14 +310,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D557997DBA79EDFD37BD1BD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gozio-weather-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3AF5C9EFD7C23B5044B9D31 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gozio-weather/Pods-gozio-weather-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gozio-weather/Pods-gozio-weather-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		37F3F96D22AC0A64007886D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37F3F97922AC0A64007886D5 /* SecondViewController.swift in Sources */,
+				3786069122AC596E00C9F0BA /* Logger.swift in Sources */,
+				37F3F97922AC0A64007886D5 /* LocationsViewController.swift in Sources */,
 				37F3F97522AC0A64007886D5 /* AppDelegate.swift in Sources */,
-				37F3F97722AC0A64007886D5 /* FirstViewController.swift in Sources */,
+				37F3F97722AC0A64007886D5 /* WeatherViewController.swift in Sources */,
+				3786068D22AC556500C9F0BA /* OpenWeatherApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,10 +545,11 @@
 		};
 		37F3F99C22AC0A65007886D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0FD8312D30C1D80A39A478D /* Pods-gozio-weather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NFK5GM28LW;
+				DEVELOPMENT_TEAM = U94RLG39QP;
 				INFOPLIST_FILE = "gozio-weather/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,10 +564,11 @@
 		};
 		37F3F99D22AC0A65007886D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8603A389CA8148E73B8FA945 /* Pods-gozio-weather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NFK5GM28LW;
+				DEVELOPMENT_TEAM = U94RLG39QP;
 				INFOPLIST_FILE = "gozio-weather/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

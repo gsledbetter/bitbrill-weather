@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  WeatherViewController.swift
 //  gozio-weather
 //
 //  Created by Greg Ledbetter on 6/8/19.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class WeatherViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let weatherApi = OpenWeatherApi()
+        weatherApi.getAtlanta5DayWeather()
     }
 
-
 }
-
