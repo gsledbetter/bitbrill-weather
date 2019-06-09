@@ -1,0 +1,32 @@
+PODS:
+  - CocoaLumberjack/Core (3.5.3)
+  - CocoaLumberjack/Swift (3.5.3):
+    - CocoaLumberjack/Core
+  - Realm (3.16.1):
+    - Realm/Headers (= 3.16.1)
+  - Realm/Headers (3.16.1)
+  - RealmSwift (3.16.1):
+    - Realm (= 3.16.1)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - CocoaLumberjack/Swift
+  - RealmSwift
+  - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CocoaLumberjack
+    - Realm
+    - RealmSwift
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
+  Realm: 601cacc51d8be3b17a377ef787be0f6ee0e76cf1
+  RealmSwift: 486f2e09d5a8ccff63ed66e48d0846b111deb5e5
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: d593456498c1d07d5eabde968420a0bd123f5f56
+
+COCOAPODS: 1.6.2

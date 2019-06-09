@@ -14,7 +14,6 @@ public class OpenWeatherApi {
     let atlWeatherUrl = "https://api.openweathermap.org/data/2.5/forecast/daily?q=Atlanta&mode=json&cnt=5&units=imperial&apikey=3aa158b2f14a9f493a8c725f8133d704"
     var getWeatherSemaphore:DispatchSemaphore?
 
-    
     public func getAtlanta5DayWeather() {
         
         self.getWeatherSemaphore = DispatchSemaphore(value: 0)
@@ -24,8 +23,6 @@ public class OpenWeatherApi {
         // URL Session start
         let url = URL(string: self.atlWeatherUrl)!
         var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        //request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: [])
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -48,14 +45,15 @@ public class OpenWeatherApi {
             logger?.log(category: .network, message: "Success in getting weather.")
             
             if let dataFromNetwork = data {
-                if let json = try? JSON(data: dataFromNetwork) {
-                    
-                    for day in json["list"].arrayValue {
-                        let dateTime = day["dt"].doubleValue
-                        let date = Date(timeIntervalSince1970: dateTime)
-                        print("Date = \(date)")
+                self.getForecastFromJson(json: dataFromNetwork, completion: {(forecast, error) in
+                    guard let weatherForecast = forecast else {
+                        logger?.log(category: .network, message: "Error in converting JSON data to Forecast struct")
+                        return
                     }
-                 }
+                    weatherForecast.describe()
+                    
+                    
+                })
             }
             requestSemaphore.signal()
             
@@ -70,12 +68,23 @@ public class OpenWeatherApi {
             if requestSuccess {
                 logger?.log(category: .network, message: "Success in getting weather.")
             } else {
-                logger?.log(category: .network, message: "Error in gettign weather.")
+                logger?.log(category: .network, message: "Error in getting weather.")
             }
             
         }
         
     }
 
-
+    private func getForecastFromJson(json: Data, completion: @escaping (_ data: FiveDayCityForecast?, _ error: Error?) -> Void) {
+        do {
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            decoder.dateDecodingStrategy = .secondsSince1970
+            let weather = try decoder.decode(FiveDayCityForecast.self, from: json)
+            return completion(weather, nil)
+        } catch let error {
+            print("Error creating current weather from JSON because: \(error.localizedDescription)")
+            return completion(nil, error)
+        }
+    }
 }
