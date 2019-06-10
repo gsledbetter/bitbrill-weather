@@ -31,26 +31,67 @@
                                     <constraint firstAttribute="width" constant="36" id="n3d-S3-dCb"/>
                                 </constraints>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5v-Bf-Mzk">
+                                <rect key="frame" x="20" y="60" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYN-mB-OQU">
+                                <rect key="frame" x="20" y="97" width="374" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDk-MB-RdU">
+                                <rect key="frame" x="20" y="170.5" width="374" height="81.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="68"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Description Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ak9-87-TBK">
+                                <rect key="frame" x="20" y="252" width="374" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="IYN-mB-OQU" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="0b9-Pn-3eH"/>
+                            <constraint firstItem="ak9-87-TBK" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="2Ua-OA-GCg"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="rDk-MB-RdU" secondAttribute="trailing" constant="20" id="6cC-vl-Nvx"/>
+                            <constraint firstItem="rDk-MB-RdU" firstAttribute="top" secondItem="IYN-mB-OQU" secondAttribute="bottom" constant="16" id="6lr-he-nYP"/>
                             <constraint firstItem="Z0C-DX-4BY" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="72d-ED-fEm"/>
+                            <constraint firstItem="Z0C-DX-4BY" firstAttribute="top" relation="lessThanOrEqual" secondItem="ak9-87-TBK" secondAttribute="bottom" constant="82" id="8WE-KG-sha"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="w5v-Bf-Mzk" secondAttribute="trailing" constant="20" id="IpZ-Ng-rlQ"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="ak9-87-TBK" secondAttribute="trailing" constant="20" id="NWw-Pa-RyF"/>
                             <constraint firstItem="Y8I-0a-1vW" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="NuB-YX-nU8"/>
                             <constraint firstItem="Z0C-DX-4BY" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="350" id="PNH-Sx-GYy"/>
+                            <constraint firstItem="ak9-87-TBK" firstAttribute="top" secondItem="rDk-MB-RdU" secondAttribute="bottom" id="W5c-bZ-kQG"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="Z0C-DX-4BY" secondAttribute="bottom" constant="24" id="aSM-4e-VWT"/>
                             <constraint firstItem="Y8I-0a-1vW" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="bsu-Ya-JE9"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="Z0C-DX-4BY" secondAttribute="trailing" constant="20" id="clK-SG-pc2"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="IYN-mB-OQU" secondAttribute="trailing" constant="20" id="e2g-zD-ryI"/>
+                            <constraint firstItem="w5v-Bf-Mzk" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="ipQ-R6-CdW"/>
+                            <constraint firstItem="IYN-mB-OQU" firstAttribute="top" secondItem="w5v-Bf-Mzk" secondAttribute="bottom" constant="16" id="mbd-QM-Lq9"/>
+                            <constraint firstItem="rDk-MB-RdU" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="pQb-bc-icW"/>
+                            <constraint firstItem="w5v-Bf-Mzk" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="16" id="w1p-QJ-CE2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Weather" image="home" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="activityIndicator" destination="Y8I-0a-1vW" id="7EN-68-l0E"/>
+                        <outlet property="lblCity" destination="IYN-mB-OQU" id="ef4-H4-iDV"/>
+                        <outlet property="lblDate" destination="w5v-Bf-Mzk" id="f6F-9g-DvT"/>
+                        <outlet property="lblDescription" destination="ak9-87-TBK" id="kG7-fB-IMd"/>
+                        <outlet property="lblTemp" destination="rDk-MB-RdU" id="52n-wg-KPs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="771" y="-465"/>
+            <point key="canvasLocation" x="769.56521739130437" y="-465.40178571428567"/>
         </scene>
         <!--Locations-->
         <scene sceneID="wg7-f3-ORb">

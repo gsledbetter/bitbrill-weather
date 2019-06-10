@@ -82,8 +82,8 @@ class FiveDayTableViewController: UITableViewController {
         cell.lblDate.text = dateFormat.string(from: forecast.dt)
         
         cell.lblDescription.text = forecast.weather[0].description.localizedCapitalized
-        cell.lblHighTemp.text = "High: \(forecast.temp.max.rounded())\u{00B0}"
-        cell.lblLowTemp.text = "Low: \(forecast.temp.max.rounded())\u{00B0}"
+        cell.lblHighTemp.text = "High: \(Int(forecast.temp.max.rounded()))\u{00B0}"
+        cell.lblLowTemp.text = "Low: \(Int(forecast.temp.min.rounded()))\u{00B0}"
         
         cell.imgWeather.image = UIImage(named: forecast.weather[0].icon)
         return cell

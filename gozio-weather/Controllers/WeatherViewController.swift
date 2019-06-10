@@ -10,6 +10,11 @@ import UIKit
 
 class WeatherViewController: UIViewController {
 
+    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var lblCity: UILabel!
+    @IBOutlet weak var lblTemp: UILabel!
+    @IBOutlet weak var lblDescription: UILabel!
+    
     private var fiveDayTableViewController: FiveDayTableViewController?
     private var fiveDayForecast:FiveDayCityForecast?
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -20,6 +25,7 @@ class WeatherViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.getFiveDayForecast()
         self.activityIndicator.hidesWhenStopped = true
+        
 
 
     }
@@ -40,12 +46,23 @@ class WeatherViewController: UIViewController {
     private func getFiveDayForecast() {
         self.activityIndicator.startAnimating()
         self.weatherApi.getAtlanta5DayWeather() { forecast in
-            self.fiveDayForecast = forecast
-            DispatchQueue.main.async {
-                self.fiveDayTableViewController?.fiveDayForecast = self.fiveDayForecast
-                self.fiveDayTableViewController?.tableView.reloadData()
-                self.activityIndicator.stopAnimating()
-                
+            if let fiveDay = forecast  {
+                self.fiveDayForecast = fiveDay
+                DispatchQueue.main.async {
+                    let dateFormatter = DateFormatter()
+                    //dateFormatter.timeStyle = .short
+                    //dateFormatter.dateStyle = .short
+                    dateFormatter.dateFormat = " MMM dd, YYYY h:mm a"
+
+                    self.lblCity.text = fiveDay.city.name
+                    self.lblDate.text = "\(dateFormatter.string(from:fiveDay.list[0].dt))"
+                    self.lblTemp.text = "\(Int(fiveDay.list[0].temp.day.rounded()))\u{00B0}"
+                    self.lblDescription.text = fiveDay.list[0].weather[0].description.localizedCapitalized
+                    self.fiveDayTableViewController?.fiveDayForecast = fiveDay
+                    self.fiveDayTableViewController?.tableView.reloadData()
+                    self.activityIndicator.stopAnimating()
+                    
+                }
             }
 
         }
