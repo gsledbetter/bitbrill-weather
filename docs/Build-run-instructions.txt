@@ -1,4 +1,3 @@
-## 4Cast App Build Instructions
 
 To build the app, clone the git repository.
 Install CocoaPods using the instructions found here: https://guides.cocoapods.org/using/getting-started.html
