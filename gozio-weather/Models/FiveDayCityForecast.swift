@@ -44,7 +44,7 @@ struct DayForecast: Codable {
     }
 }
 
-struct FiveDayCityForecast: Codable {
+public struct FiveDayCityForecast: Codable {
     let city: City
     let list: [DayForecast]
     

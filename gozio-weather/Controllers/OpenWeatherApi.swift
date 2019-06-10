@@ -13,11 +13,11 @@ public class OpenWeatherApi {
 
     let atlWeatherUrl = "https://api.openweathermap.org/data/2.5/forecast/daily?q=Atlanta&mode=json&cnt=5&units=imperial&apikey=3aa158b2f14a9f493a8c725f8133d704"
     var getWeatherSemaphore:DispatchSemaphore?
+    var weatherForecast:FiveDayCityForecast?
 
-    public func getAtlanta5DayWeather() {
+    public func getAtlanta5DayWeather(completion: @escaping (FiveDayCityForecast?) -> Void) {
         
         self.getWeatherSemaphore = DispatchSemaphore(value: 0)
-        
         var requestSuccess = false
         
         // URL Session start
@@ -51,12 +51,12 @@ public class OpenWeatherApi {
                         return
                     }
                     weatherForecast.describe()
-                    
-                    
+                    completion(weatherForecast)
+
                 })
             }
             requestSemaphore.signal()
-            
+
         }
         task.resume()
         
