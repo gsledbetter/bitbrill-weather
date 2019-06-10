@@ -14,10 +14,10 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var lblCity: UILabel!
     @IBOutlet weak var lblTemp: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private var fiveDayTableViewController: FiveDayTableViewController?
     private var fiveDayForecast:FiveDayCityForecast?
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     let weatherApi = OpenWeatherApi()
     
     override func viewDidLoad() {
@@ -25,9 +25,6 @@ class WeatherViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.getFiveDayForecast()
         self.activityIndicator.hidesWhenStopped = true
-        
-
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -40,7 +37,6 @@ class WeatherViewController: UIViewController {
             }
             fiveDayTableViewController?.fiveDayForecast = forecast
         }
-        
     }
     
     private func getFiveDayForecast() {
@@ -64,9 +60,6 @@ class WeatherViewController: UIViewController {
                     
                 }
             }
-
         }
-        
     }
-
 }

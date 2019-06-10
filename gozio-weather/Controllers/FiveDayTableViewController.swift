@@ -35,8 +35,7 @@ class FiveDayTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        guard let forecast = self.fiveDayForecast else {
+        guard self.fiveDayForecast != nil else {
             return 0
         }
 
@@ -56,8 +55,7 @@ class FiveDayTableViewController: UITableViewController {
     
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        guard let forecast = self.fiveDayForecast else {
+        guard self.fiveDayForecast != nil else {
             return 0
         }
         return 5
@@ -88,17 +86,5 @@ class FiveDayTableViewController: UITableViewController {
         cell.imgWeather.image = UIImage(named: forecast.weather[0].icon)
         return cell
     }
-
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
