@@ -15,6 +15,7 @@ class FiveDayTableViewCell: UITableViewCell {
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var lblHighTemp: UILabel!
     @IBOutlet weak var lblLowTemp: UILabel!
+    @IBOutlet weak var imgWeather: UIImageView!
     
 }
 
@@ -83,7 +84,8 @@ class FiveDayTableViewController: UITableViewController {
         cell.lblDescription.text = forecast.weather[0].description.localizedCapitalized
         cell.lblHighTemp.text = "High: \(forecast.temp.max.rounded())\u{00B0}"
         cell.lblLowTemp.text = "Low: \(forecast.temp.max.rounded())\u{00B0}"
-
+        
+        cell.imgWeather.image = UIImage(named: forecast.weather[0].icon)
         return cell
     }
 
